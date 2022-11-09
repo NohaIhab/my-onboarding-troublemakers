@@ -1,0 +1,26 @@
+# Copyright 2022 Canonical Ltd.
+# See LICENSE file for licensing details.
+
+name: database
+display-name: KeyDB
+description: |
+  Simple KeyDB charm for Kubernetes
+summary: |
+  Troublemaker charm
+maintainers:
+  - Pietro Pasotti <pietro.pasotti@canonical.com>
+
+containers:
+  keydb:
+    resource: keydb-image
+
+resources:
+  keydb-image:
+    type: oci-image
+    description: Ubuntu LTS Docker image for KeyDB
+    # Included for simplicity in integration tests
+    upstream-source: eqalpha/keydb
+
+provides:
+  db:
+    interface: db

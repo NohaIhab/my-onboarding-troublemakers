@@ -1,0 +1,14 @@
+# Copyright 2022 Canonical Ltd.
+# See LICENSE file for licensing details.
+
+options:
+  requirepass:
+    default:
+    description: password to require
+    type: string
+  port:
+    default: 6379
+    type: int
+  appendonly:
+    default: 'no'
+    type: string

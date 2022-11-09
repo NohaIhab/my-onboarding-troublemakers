@@ -1,0 +1,21 @@
+# Copyright 2022 Canonical Ltd.
+# See LICENSE file for licensing details.
+
+name: webserver
+description: Simple webserver.
+summary: Simple webserver.
+
+containers:
+  webserver:
+    resource: webserver-image
+
+resources:
+  webserver-image:
+    type: oci-image
+    description: OCI image for webserver
+    # Included for simplicity in integration tests
+    upstream-source: python:slim-buster
+
+requires:
+  db:
+    interface: database

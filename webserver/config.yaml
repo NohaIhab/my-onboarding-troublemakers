@@ -1,0 +1,18 @@
+# Copyright 2022 Canonical Ltd.
+# See LICENSE file for licensing details.
+
+# Learn more about config at: https://juju.is/docs/sdk/config
+
+options:
+  external-hostname:
+    default: 'webserver'
+    description: Hostname to be passed to the ingress integrator.
+    type: string
+  service-port:
+    default: 8080
+    description: Port to be passed to the ingress integrator.
+    type: int
+  webserver-key:
+    default: 123
+    description: A parameter the webserver really, really needs.
+    type: string
